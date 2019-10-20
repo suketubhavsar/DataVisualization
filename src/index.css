@@ -1,0 +1,172 @@
+html{
+    font-family: verdana;
+    margin: 0px;
+    padding: 0px;
+}
+h1,p,div {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+#header{
+    font-size: 2.5vw;
+    text-align: center;
+}
+#footer {
+    font-size: 1.5vw;
+    text-align: center;
+}
+#body {
+    min-height: 90vh;
+    display: grid;
+    grid-template-areas: 'total chartCategory chartSubcategory filterYear'
+    'stats chartCategory chartSubcategory filterYear'
+    'stats chartCategory chartSubcategory filterMonth'
+    'chartYear chartYear chartSubcategory filterMonth'
+    'chartYear chartYear chartSubcategory filterMonth'
+    'chartMonth chartMonth matrixMonth filterQtr'
+    'chartMonth chartMonth matrixMonth filterQtr'
+    'matrixQtr matrixQtr matrixMonth filterProp'
+    'matrixQtr matrixQtr matrixMonth filterProp'
+    'table table table table'
+    ;
+
+    grid-template-columns: 1fr 3.5fr 4.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 1fr 2fr;
+}
+
+#body div{
+    /* box-shadow: -2px -2px gray; */
+    border-radius: 5px;
+    margin:0px 0px 2px 2px;
+    box-shadow: 1px 1px lightgray;
+}
+
+/* <div id="total"></div> */
+#total {
+    grid-area: total;
+    background-color: purple;
+}
+/* <div id="stats"></div> */
+#stats {
+    grid-area: stats;
+    background-color: gray;
+}
+/* <div id="filterYear"></div> */
+#filterYear{
+    grid-area: filterYear;
+    background-color: lightsalmon;
+}
+/* <div id="filterMonth"></div> */
+#filterMonth{
+    grid-area: filterMonth;
+    background-color: lightskyblue;
+}
+/* <div id="filterQtr"></div> */
+#filterQtr{
+    grid-area: filterQtr;
+    background-color: lightseagreen;
+}
+/* <div id="filterProp"></div> */
+#filterProp{
+    grid-area: filterProp;
+    background-color: lightpink;
+}
+/* <div id="chartCategory"></div> */
+#chartCategory{
+    grid-area: chartCategory;
+    background-color: blue;
+}
+/* <div id="chartSubcategory"></div> */
+#chartSubcategory{
+    grid-area: chartSubcategory;
+    background-color: green;
+}
+/* <div id="chartYear"></div> */
+#chartYear{
+    grid-area: chartYear;
+    background-color: orange;
+}
+/* <div id="chartMonth"></div> */
+#chartMonth{
+    grid-area: chartMonth;
+    background-color: yellow;
+}
+/* <div id="matrixMonth"></div> */
+#matrixMonth{
+    grid-area: matrixMonth;
+    background-color: blue;
+}
+/* <div id="matrixQtr"></div> */
+#matrixQtr{
+    grid-area: matrixQtr;
+    background-color: darkgreen;
+}
+/* <div id="table"></div> */
+#table{
+    grid-area: table;
+    background-color: powderblue;
+}
+
+@media screen and (max-width: 780px){
+    #body {
+        min-height: 90vh;
+        display: grid;
+        grid-template-areas: 'chartCategory total'
+        'chartCategory stats'
+        'chartCategory stats'
+        'chartYear stats'
+        'chartYear filterYear'
+        'chartSubcategory filterYear'
+        'chartSubcategory filterMonth'
+        'chartSubcategory filterMonth'
+        'chartSubcategory filterMonth'
+        'chartSubcategory filterMonth'
+        'chartSubcategory filterQtr'
+        'chartMonth filterQtr'
+        'chartMonth filterQtr'
+        'matrixQtr filterProp'
+        'matrixQtr filterProp'
+        'matrixMonth matrixMonth'
+        'matrixMonth matrixMonth'
+        'matrixMonth matrixMonth'
+        'matrixMonth matrixMonth'
+        'table table'
+        'table table'
+        'table table'
+        'table table'
+        ;
+    
+        grid-template-columns: 8fr 2fr;
+        grid-template-rows: auto;
+        /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 1fr 2fr; */
+    }
+}
+
+@media screen and (max-width: 440px){
+    #body {
+        min-height: 90vh;
+        display: grid;
+        grid-template-areas: 
+        'filterYear'
+        'filterMonth'
+        'filterQtr'
+        'filterProp'
+        'total'
+        'stats'
+        'chartYear'
+        'chartCategory'
+        'chartSubcategory'
+        'chartMonth'
+        'matrixQtr'
+        'matrixMonth'
+        'table'
+        ;
+    
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 1fr 2fr; */
+    }
+}

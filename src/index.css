@@ -30,11 +30,10 @@ h1,p,div {
     'chartMonth chartMonth matrixMonth filterQtr'
     'matrixQtr matrixQtr matrixMonth filterProp'
     'matrixQtr matrixQtr matrixMonth filterProp'
-    'table table table table'
     ;
 
     grid-template-columns: 1fr 3.5fr 4.5fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 1fr;
 }
 
 #body div{
@@ -47,32 +46,48 @@ h1,p,div {
 /* <div id="total"></div> */
 #total {
     grid-area: total;
-    background-color: purple;
+    /* background-color: purple; */
+    font-size: 2.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
 }
 /* <div id="stats"></div> */
 #stats {
     grid-area: stats;
     background-color: gray;
 }
+
+.dc-select-menu{
+    width:100%;
+    height:auto;
+    border: 0px;
+}
+
 /* <div id="filterYear"></div> */
 #filterYear{
+    text-align: center;
     grid-area: filterYear;
-    background-color: lightsalmon;
+    /* background-color: lightsalmon; */
 }
 /* <div id="filterMonth"></div> */
 #filterMonth{
+    text-align: center;
     grid-area: filterMonth;
-    background-color: lightskyblue;
+    /* background-color: lightskyblue; */
 }
 /* <div id="filterQtr"></div> */
 #filterQtr{
+    text-align: center;
     grid-area: filterQtr;
-    background-color: lightseagreen;
+    /* background-color: lightseagreen; */
 }
 /* <div id="filterProp"></div> */
 #filterProp{
+    text-align: center;
     grid-area: filterProp;
-    background-color: lightpink;
+    /* background-color: lightpink; */
 }
 /* <div id="chartCategory"></div> */
 #chartCategory{
@@ -112,7 +127,7 @@ h1,p,div {
 
 @media screen and (max-width: 780px){
     #body {
-        min-height: 90vh;
+        min-height: 95vh;
         display: grid;
         grid-template-areas: 'chartCategory total'
         'chartCategory stats'
@@ -133,10 +148,6 @@ h1,p,div {
         'matrixMonth matrixMonth'
         'matrixMonth matrixMonth'
         'matrixMonth matrixMonth'
-        'table table'
-        'table table'
-        'table table'
-        'table table'
         ;
     
         grid-template-columns: 8fr 2fr;
@@ -147,7 +158,7 @@ h1,p,div {
 
 @media screen and (max-width: 440px){
     #body {
-        min-height: 90vh;
+        min-height: 95vh;
         display: grid;
         grid-template-areas: 
         'filterYear'
@@ -162,7 +173,6 @@ h1,p,div {
         'chartMonth'
         'matrixQtr'
         'matrixMonth'
-        'table'
         ;
     
         grid-template-columns: 1fr;

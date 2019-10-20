@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Transaction Analysis</title>
     <link rel="stylesheet" type="text/css" href="src/index.css"></link>
+    <link rel="stylesheet" type="text/css" href="js/dc.css"></link>
   </head>
   <body>
     <div id="header">
@@ -14,20 +15,27 @@
     <div id="body">
       <div id="total"></div>
       <div id="stats"></div>
-      <div id="filterYear"></div>
-      <div id="filterMonth"></div>
-      <div id="filterQtr"></div>
-      <div id="filterProp"></div>
+      <div id="filterYear">Year</div>
+      <div id="filterMonth">Month</div>
+      <div id="filterQtr">Qtr</div>
+      <div id="filterProp">Property</div>
       <div id="chartCategory"></div>
       <div id="chartSubcategory"></div>
       <div id="chartYear"></div>
       <div id="chartMonth"></div>
       <div id="matrixMonth"></div>
       <div id="matrixQtr"></div>
-      <div id="table"></div>
     </div>
-    <div id="footer">
+    <div id="table" style="height:30vh; overflow-y: scroll;">
+      <table id="tableData" class="table table-hover"></table><table id="table" class="table table-hover"></table>
+    </div>
+  <div id="footer">
             <p>Financial transaction analysis dashboard is to visualize transcations and compare changes yearly, qtrly and monthly.</p>
             <p>This dashboard is developed using HTML5, CSS, JavaScript and JS libraries such as Crossfilter, D3 and DC.</p>
-  </body>
+            </div>
+          <script type="text/javascript" src="js/d3.js"></script>
+          <script type="text/javascript" src="js/crossfilter.js"></script>
+          <script type="text/javascript" src="js/dc.js"></script>
+          <script type="text/javascript" src="src/index.js"></script>
+      </body>
 </html>

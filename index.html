@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Transaction Analysis</title>
+    <title>Expense Dashboard</title>
     <link rel="stylesheet" type="text/css" href="src/index.css"></link>
     <link rel="stylesheet" type="text/css" href="js/dc.css"></link>
   </head>
   <body>
     <div id="header">
-      <h1>Financial Transaction Analysis</h1>
+      <h1>Expense Dashboard</h1>
     </div>
     <div id="body">
       <div id="total"></div>
@@ -19,10 +19,30 @@
       <div id="filterMonth">Month</div>
       <div id="filterQtr">Qtr</div>
       <div id="filterProp">Property</div>
-      <div id="chartCategory"></div>
-      <div id="chartSubcategory"></div>
-      <div id="chartYear"></div>
-      <div id="chartMonth"></div>
+      <div id="chartCategory">
+        Category:
+        <a class='reset'
+        href='javascript:chartCategory.filterAll();dc.redrawAll();'
+        style='display: none;'>reset</a>
+      </div>
+      <div id="chartSubcategory">
+          Subcategory:
+        <a class='reset'
+        href='javascript:chartSubcategory.filterAll();dc.redrawAll();'
+        style='display: none;'>reset</a>
+      </div>
+      <div id="chartYear">
+          Year:
+        <a class='reset'
+        href='javascript:chartYear.filterAll();dc.redrawAll();'
+        style='display: none;'>reset</a><br />
+      </div>
+      <div id="chartMonth">
+        Month:
+        <a class='reset'
+        href='javascript:chartMonth.filterAll();dc.redrawAll();'
+        style='display: none;'>reset</a>
+      </div>
       <div id="matrixMonth"></div>
       <div id="matrixQtr"></div>
     </div>

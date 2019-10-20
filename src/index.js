@@ -1,4 +1,5 @@
-let ndx, all, yearMonthDim, yearDim, monthDim, qtrDim, propertyDim;
+let ndx, all, yearMonthDim, yearDim, monthDim, qtrDim, propertyDim, categoryDim, subcategoryDim;
+let chartCategory, chartSubcategory, chartYear, chartMonth;
 
 window.onload = () => {
   //Category,SubCategory,Property,Amount,Year,Month
@@ -68,6 +69,7 @@ window.onload = () => {
       .valueAccessor(d => d)
       .group(all);
 
+    //setting filters
     yearDim = ndx.dimension(d => d.Year);
     let filterYear = dc.selectMenu("#filterYear");
     filterYear
@@ -105,6 +107,79 @@ window.onload = () => {
       .numberVisible(3)
       .group(propertyDim.group());
 
+    //chartCategory
+    categoryDim=ndx.dimension(d => d.Category);
+    let categoryAmountGroup = categoryDim.group()
+    .reduceSum(function(d){
+        return d.Amount;
+    });
+
+    chartCategory = dc.pieChart("#chartCategory");
+    chartCategory
+      .dimension(categoryDim)
+      .group(categoryAmountGroup)
+      .renderLabel(true)
+      .title(d => d.key + ': $'+d.value.toFixed(2));
+
+    //chartSubcategory
+    subcategoryDim=ndx.dimension(d => d.SubCategory);
+    let subcategoryAmountGroup = subcategoryDim.group()
+    .reduceSum(function(d){
+        return d.Amount;
+    });
+
+    chartSubcategory = dc.pieChart("#chartSubcategory");
+    chartSubcategory
+      .dimension(subcategoryDim)
+      .group(subcategoryAmountGroup)
+      .renderLabel(true)
+      .title(d => d.key + ': $'+d.value.toFixed(2));
+
+    //chartYear
+    let yearAmountGroup = yearDim.group()
+    .reduceSum(function(d){
+        return d.Amount;
+    });
+    let cayxScale=d3.scaleOrdinal().domain( yearAmountGroup.all().map(d=>d.key));
+
+    chartYear = dc.barChart('#chartYear');
+    chartYear 
+        // .margins({top: 10, right: 50, bottom: 30, left: 40})
+        .dimension(yearDim)
+        .group(yearAmountGroup)
+        .elasticY(true)
+        .yAxisLabel("Total Amount")
+        .xAxisLabel("Year")
+        .title(function(d){ return d.key +": $"+d.value.toFixed(2) })
+        .gap(5)
+        .x(cayxScale)
+        .xUnits(dc.units.ordinal)
+        .renderHorizontalGridLines(true);
+    chartYear.yAxis().tickFormat(d => (d/1000)+"K");
+
+    //chartMonth
+    let monthAmountGroup = monthDim.group()
+    .reduceSum(function(d){
+        return d.Amount;
+    });
+    let camxScale=d3.scaleOrdinal().domain( monthAmountGroup.all().map(d=>d.key));
+
+    chartMonth = dc.barChart('#chartMonth');
+    chartMonth 
+        // .margins({top: 10, right: 50, bottom: 30, left: 40})
+        .dimension(monthDim)
+        .group(monthAmountGroup)
+        .elasticY(true)
+        .yAxisLabel("Total Amount")
+        .xAxisLabel("Month")
+        .title(function(d){ return d.key +": $"+d.value.toFixed(2) })
+        .gap(5)
+        .x(camxScale)
+        .xUnits(dc.units.ordinal)
+        .renderHorizontalGridLines(true);
+        chartMonth.yAxis().tickFormat(d => (d/1000)+"K");
+
+    //setting table
     yearMonthDim = ndx.dimension(function(d) {
       return [d.Year, d.MonthNumber];
     });

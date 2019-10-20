@@ -92,22 +92,22 @@ h1,p,div {
 /* <div id="chartCategory"></div> */
 #chartCategory{
     grid-area: chartCategory;
-    background-color: blue;
+    /* background-color: blue; */
 }
 /* <div id="chartSubcategory"></div> */
 #chartSubcategory{
     grid-area: chartSubcategory;
-    background-color: green;
+    /* background-color: green; */
 }
 /* <div id="chartYear"></div> */
 #chartYear{
     grid-area: chartYear;
-    background-color: orange;
+    /* background-color: orange; */
 }
 /* <div id="chartMonth"></div> */
 #chartMonth{
     grid-area: chartMonth;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 /* <div id="matrixMonth"></div> */
 #matrixMonth{

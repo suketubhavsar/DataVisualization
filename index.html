@@ -56,13 +56,20 @@
   
       </div>
     </div>
-    <div id="table" style="height:30vh; overflow-y: scroll;">
-      Raw data:
-      <table id="tableData" ></table>
+    <div id="transactions">
+      
+    <div class='dc-data-count' >
+        <strong>Transactions:</strong><br />
+        <span class='filter-count'></span> selected out of <span class='total-count'></span> records.
+        <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
+      </div>
+      <div id="table" style="height:30vh; overflow-y: scroll;">
+          <table id="tableData" ></table>
       <!-- <table id="table" class="table table-hover"></table> -->
     </div>
+  </div>
   <div id="footer">
-            <p>Financial transaction analysis dashboard is to visualize transcations and compare changes yearly, qtrly and monthly.</p>
+            <p>Expense Dashboard is to visualize expense transcations and compare changes yearly, qtrly and monthly.</p>
             <p>This dashboard is developed using HTML5, CSS, JavaScript and JS libraries such as Crossfilter, D3 and DC.</p>
             </div>
           <script type="text/javascript" src="js/d3.js"></script>

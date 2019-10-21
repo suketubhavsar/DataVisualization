@@ -9,6 +9,19 @@ h1,p,div {
 
 }
 
+div.dc-data-count {
+    grid-area: datacount;
+    text-align: left;
+    display: block;
+    /* width: 100vw; */
+    /* height: 5vh; */
+  }
+
+#transactions{
+    display: grid;
+    grid-template-areas:"datacount"
+    "table";
+}
 
 #header{
     font-size: 2.5vw;
@@ -27,9 +40,9 @@ h1,p,div {
     'chartYear chartYear chartSubcategory filterMonth'
     'chartYear chartYear chartSubcategory filterMonth'
     'chartMonth chartMonth matrixMonth filterQtr'
-    'chartMonth chartMonth matrixMonth filterQtr'
+    /* 'chartMonth chartMonth matrixMonth filterQtr' */
     'matrixQtr matrixQtr matrixMonth filterProp'
-    'matrixQtr matrixQtr matrixMonth filterProp' 
+    /* 'matrixQtr matrixQtr matrixMonth filterProp'  */
     ;
 
     grid-template-columns: 1fr 3.5fr 4.5fr 1fr;

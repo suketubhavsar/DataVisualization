@@ -41,7 +41,7 @@ div.dc-data-count {
     "stats chartCategory chartSubcategory filterYear"
     "stats chartCategory chartSubcategory filterMonth"
     "chartYear chartYear chartSubcategory filterMonth"
-    "chartYear chartYear chartSubcategory filterMonth"
+    /* "chartYear chartYear chartSubcategory filterMonth" */
     "chartMonth chartMonth matrixMonth filterQtr"
     /* 'chartMonth chartMonth matrixMonth filterQtr' */
     "matrixQtr matrixQtr matrixMonth filterProp"

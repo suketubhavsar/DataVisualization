@@ -69,6 +69,7 @@ window.onload = () => {
     }
 
     ndx = crossfilter(data);
+    // all = ndx.groupAll();
     all = ndx.groupAll().reduceSum(d => d.Amount);
 
     //display total amount
@@ -77,6 +78,16 @@ window.onload = () => {
       .formatNumber(d3.format(".2s"))
       .valueAccessor(d => d)
       .group(all);
+
+
+    //total and filtered raw counts
+    var dataCount = dc.dataCount(".dc-data-count")
+    .dimension(ndx)
+    .group(ndx.groupAll())
+    .html({
+      some: '<strong>Transactions: </strong><strong>%filter-count</strong> selected out of <strong>%total-count</strong> records | <a href="\javascript:dc.filterAll(); dc.renderAll();\">Reset All</a>',
+      all: '<strong>Transactions: </strong>All <strong>%total-count</strong> records selected. Please click on the graph to apply filters.'
+    });    
 
     //setting filters
     yearDim = ndx.dimension(d => d.Year);

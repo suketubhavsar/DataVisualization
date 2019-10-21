@@ -29,11 +29,11 @@ h1,p,div {
     'chartMonth chartMonth matrixMonth filterQtr'
     'chartMonth chartMonth matrixMonth filterQtr'
     'matrixQtr matrixQtr matrixMonth filterProp'
-    'matrixQtr matrixQtr matrixMonth filterProp'
+    'matrixQtr matrixQtr matrixMonth filterProp' 
     ;
 
     grid-template-columns: 1fr 3.5fr 4.5fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 1fr; */
 }
 
 #body div{
@@ -112,17 +112,18 @@ h1,p,div {
 /* <div id="matrixMonth"></div> */
 #matrixMonth{
     grid-area: matrixMonth;
-    background-color: blue;
+    /* background-color: blue; */
 }
+
 /* <div id="matrixQtr"></div> */
 #matrixQtr{
     grid-area: matrixQtr;
-    background-color: darkgreen;
+    /* background-color: darkgreen; */
 }
 /* <div id="table"></div> */
 #table{
     grid-area: table;
-    background-color: powderblue;
+    /* background-color: powderblue; */
 }
 
 @media screen and (max-width: 780px){

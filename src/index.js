@@ -1,5 +1,6 @@
 let ndx, all, yearMonthDim, yearDim, monthDim, qtrDim, propertyDim, categoryDim, subcategoryDim;
 let chartCategory, chartSubcategory, chartYear, chartMonth;
+let matrixMonth, matrixQtr;
 
 window.onload = () => {
   //Category,SubCategory,Property,Amount,Year,Month
@@ -26,7 +27,7 @@ window.onload = () => {
         .indexOf(d.Month)
         .toString()
         .padStart(2, "0");
-      d.Qtr = "Qtr-" + (Math.floor(months.indexOf(d.Month) / 3) + 1);
+      d.Qtr = (Math.floor(months.indexOf(d.Month) / 3) + 1);
     });
     //console.log(data);
     function print_filter(filter) {
@@ -98,6 +99,8 @@ window.onload = () => {
       .multiple(true)
       .numberVisible(5)
       .group(qtrDim.group());
+    filterQtr
+    .title(d => "Qtr-"+d.key + ": "+ d.value);
 
     propertyDim = ndx.dimension(d => d.Property);
     let filterProp = dc.selectMenu("#filterProp");
@@ -179,10 +182,78 @@ window.onload = () => {
         .renderHorizontalGridLines(true);
         chartMonth.yAxis().tickFormat(d => (d/1000)+"K");
 
-    //setting table
+
+//matrixMonth
     yearMonthDim = ndx.dimension(function(d) {
-      return [d.Year, d.MonthNumber];
+        return [d.Year, d.MonthNumber];
     });
+    let yearMonthAmountGroup = yearMonthDim.group()
+        .reduceSum(d => d.Amount);
+
+    matrixMonth = dc.heatMap("#matrixMonth");
+    matrixMonth
+    .margins({top: 10, right: 10, bottom: 30, left: 50})
+        .dimension(yearMonthDim)
+        .group(yearMonthAmountGroup)
+    .rowsLabel(d => months[d])
+    .keyAccessor(function(d) { return +d.key[0]; })
+    .valueAccessor(function(d) { return +d.key[1]; })
+    .colorAccessor(function(d) { return +d.value; })
+    .title(function(d) {
+        return "Year:   " + d.key[0] + "\n" +
+               "Month:  " + months[d.key[1]] + "\n" +
+               "Amount: $" + d.value.toFixed(2) ;})
+            //    .colors(["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"])
+    .colors(
+        d3.scaleLinear()
+        .domain(d3.extent(yearMonthAmountGroup.all().map(d=>d.value)))
+        .range(["white","red"])
+    )
+    .calculateColorDomain();
+    // .on('pretransition', function(chart) {
+    //     // chart.selectAll('rect.heat-box')
+    //     chart.selectAll('g.box-group')
+    //     .attr("fill-opacity","0.25")
+    //     .append("text")
+    //     // .attr("x", d => x(d.value))
+    //     // .attr("width","100%")
+    //     // .attr("height","100%")
+    //     .attr("fill","black")
+    //     .attr("dy",".35em")
+    //     .text(d => {return "$"+d.value.toFixed(2);});
+    //     console.log(chart);
+    // });
+
+    //console.log(d3.extent(yearMonthAmountGroup.all().map(d=>d.value)));
+//matrixQtr
+yearQtrDim = ndx.dimension(function(d) {
+    return [d.Year, d.Qtr];
+});
+let yearQtrAmountGroup = yearQtrDim.group()
+    .reduceSum(d => d.Amount);
+
+    matrixQtr = dc.heatMap("#matrixQtr");
+    matrixQtr
+.margins({top: 10, right: 10, bottom: 30, left: 30})
+    .dimension(yearQtrDim)
+    .group(yearQtrAmountGroup)
+.rowsLabel(d => "Qtr-"+d)
+.keyAccessor(function(d) { return +d.key[0]; })
+.valueAccessor(function(d) { return +d.key[1]; })
+.colorAccessor(function(d) { return +d.value; })
+.title(function(d) {
+    return "Year:   " + d.key[0] + "\n" +
+           "Qtr:  " + d.key[1] + "\n" +
+           "Amount: $" + d.value.toFixed(2) ;})
+        //    .colors(["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"])
+.colors(
+    d3.scaleLinear()
+    .domain(d3.extent(yearQtrAmountGroup.all().map(d=>d.value)))
+    .range(["white","red"])
+)
+.calculateColorDomain();
+
+    //setting table
 
     let dataTable = dc.dataTable("#tableData");
     dataTable

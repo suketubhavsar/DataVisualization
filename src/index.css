@@ -1,198 +1,199 @@
-html{
-    font-family: verdana;
-    margin: 0px;
-    padding: 0px;
+html {
+  font-family: verdana;
+  margin: 0px;
+  padding: 0px;
 }
-h1,p,div {
-    margin: 0px;
-    padding: 0px;
-
+h1,
+p,
+div {
+  margin: 0px;
+  padding: 0px;
 }
 
 div.dc-data-count {
-    grid-area: datacount;
-    text-align: left;
-    display: block;
-    /* width: 100vw; */
-    /* height: 5vh; */
-  }
+  grid-area: datacount;
+  text-align: left;
+  display: block;
+  /* width: 100vw; */
+  /* height: 5vh; */
+}
 
-#transactions{
-    display: grid;
-    grid-template-areas:"datacount"
+#transactions {
+  display: grid;
+  grid-template-areas:
+    "datacount"
     "table";
 }
 
-#header{
-    font-size: 2.5vw;
-    text-align: center;
+#header {
+  font-size: 2.5vw;
+  text-align: center;
 }
 #footer {
-    font-size: 1.5vw;
-    text-align: center;
+  font-size: 1.5vw;
+  text-align: center;
 }
 #body {
-    min-height: 90vh;
-    display: grid;
-    grid-template-areas: 'total chartCategory chartSubcategory filterYear'
-    'stats chartCategory chartSubcategory filterYear'
-    'stats chartCategory chartSubcategory filterMonth'
-    'chartYear chartYear chartSubcategory filterMonth'
-    'chartYear chartYear chartSubcategory filterMonth'
-    'chartMonth chartMonth matrixMonth filterQtr'
+  min-height: 90vh;
+  display: grid;
+  grid-template-areas:
+    "total chartCategory chartSubcategory filterYear"
+    "stats chartCategory chartSubcategory filterYear"
+    "stats chartCategory chartSubcategory filterMonth"
+    "chartYear chartYear chartSubcategory filterMonth"
+    "chartYear chartYear chartSubcategory filterMonth"
+    "chartMonth chartMonth matrixMonth filterQtr"
     /* 'chartMonth chartMonth matrixMonth filterQtr' */
-    'matrixQtr matrixQtr matrixMonth filterProp'
-    /* 'matrixQtr matrixQtr matrixMonth filterProp'  */
-    ;
+    "matrixQtr matrixQtr matrixMonth filterProp"
+    /* 'matrixQtr matrixQtr matrixMonth filterProp'  */;
 
-    grid-template-columns: 1fr 3.5fr 4.5fr 1fr;
-    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 1fr; */
+  grid-template-columns: 1fr 3.5fr 4.5fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 1fr; */
 }
 
-#body div{
-    /* box-shadow: -2px -2px gray; */
-    border-radius: 5px;
-    margin:0px 0px 2px 2px;
-    box-shadow: 1px 1px lightgray;
+#body div {
+  /* box-shadow: -2px -2px gray; */
+  border-radius: 5px;
+  margin: 0px 0px 2px 2px;
+  box-shadow: 1px 1px lightgray;
 }
 
 /* <div id="total"></div> */
 #total {
-    grid-area: total;
-    /* background-color: purple; */
-    font-size: 2.5em;
-    font-weight: bold;
-    display: flex;
-    justify-content: center; /* align horizontal */
-    align-items: center; /* align vertical */
+  grid-area: total;
+  /* background-color: purple; */
+  font-size: 2.5em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
 }
 /* <div id="stats"></div> */
 #stats {
-    grid-area: stats;
-    background-color: gray;
+  grid-area: stats;
+  background-color: gray;
 }
 
-.dc-select-menu{
-    width:100%;
-    height:auto;
-    border: 0px;
+.dc-select-menu {
+  width: 100%;
+  height: auto;
+  border: 0px;
 }
 
 /* <div id="filterYear"></div> */
-#filterYear{
-    text-align: center;
-    grid-area: filterYear;
-    /* background-color: lightsalmon; */
+#filterYear {
+  text-align: center;
+  grid-area: filterYear;
+  /* background-color: lightsalmon; */
 }
 /* <div id="filterMonth"></div> */
-#filterMonth{
-    text-align: center;
-    grid-area: filterMonth;
-    /* background-color: lightskyblue; */
+#filterMonth {
+  text-align: center;
+  grid-area: filterMonth;
+  /* background-color: lightskyblue; */
 }
 /* <div id="filterQtr"></div> */
-#filterQtr{
-    text-align: center;
-    grid-area: filterQtr;
-    /* background-color: lightseagreen; */
+#filterQtr {
+  text-align: center;
+  grid-area: filterQtr;
+  /* background-color: lightseagreen; */
 }
 /* <div id="filterProp"></div> */
-#filterProp{
-    text-align: center;
-    grid-area: filterProp;
-    /* background-color: lightpink; */
+#filterProp {
+  text-align: center;
+  grid-area: filterProp;
+  /* background-color: lightpink; */
 }
 /* <div id="chartCategory"></div> */
-#chartCategory{
-    grid-area: chartCategory;
-    /* background-color: blue; */
+#chartCategory {
+  grid-area: chartCategory;
+  /* background-color: blue; */
 }
 /* <div id="chartSubcategory"></div> */
-#chartSubcategory{
-    grid-area: chartSubcategory;
-    /* background-color: green; */
+#chartSubcategory {
+  grid-area: chartSubcategory;
+  /* background-color: green; */
 }
 /* <div id="chartYear"></div> */
-#chartYear{
-    grid-area: chartYear;
-    /* background-color: orange; */
+#chartYear {
+  grid-area: chartYear;
+  /* background-color: orange; */
 }
 /* <div id="chartMonth"></div> */
-#chartMonth{
-    grid-area: chartMonth;
-    /* background-color: yellow; */
+#chartMonth {
+  grid-area: chartMonth;
+  /* background-color: yellow; */
 }
 /* <div id="matrixMonth"></div> */
-#matrixMonth{
-    grid-area: matrixMonth;
-    /* background-color: blue; */
+#matrixMonth {
+  grid-area: matrixMonth;
+  /* background-color: blue; */
 }
 
 /* <div id="matrixQtr"></div> */
-#matrixQtr{
-    grid-area: matrixQtr;
-    /* background-color: darkgreen; */
+#matrixQtr {
+  grid-area: matrixQtr;
+  /* background-color: darkgreen; */
 }
 /* <div id="table"></div> */
-#table{
-    grid-area: table;
-    border-style: solid;
-    border-width: 1px;
-    border-color: gray;
+#table {
+  grid-area: table;
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
 }
 
-@media screen and (max-width: 780px){
-    #body {
-        min-height: 95vh;
-        display: grid;
-        grid-template-areas: 'chartCategory total'
-        'chartCategory stats'
-        'chartCategory stats'
-        'chartYear stats'
-        'chartYear filterYear'
-        'chartSubcategory filterYear'
-        'chartSubcategory filterMonth'
-        'chartSubcategory filterMonth'
-        'chartSubcategory filterMonth'
-        'chartSubcategory filterMonth'
-        'chartSubcategory filterQtr'
-        'chartMonth filterQtr'
-        'chartMonth filterQtr'
-        'matrixQtr filterProp'
-        'matrixQtr filterProp'
-        'matrixMonth matrixMonth'
-        'matrixMonth matrixMonth'
-        'matrixMonth matrixMonth'
-        'matrixMonth matrixMonth'
-        ;
-    
-        grid-template-columns: 8fr 2fr;
-        grid-template-rows: auto;
-        /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 1fr 2fr; */
-    }
+@media screen and (max-width: 780px) {
+  #body {
+    min-height: 95vh;
+    display: grid;
+    grid-template-areas:
+      "chartCategory total"
+      "chartCategory stats"
+      "chartCategory stats"
+      "chartYear stats"
+      "chartYear filterYear"
+      "chartSubcategory filterYear"
+      "chartSubcategory filterMonth"
+      "chartSubcategory filterMonth"
+      "chartSubcategory filterMonth"
+      "chartSubcategory filterMonth"
+      "chartSubcategory filterQtr"
+      "chartMonth filterQtr"
+      "chartMonth filterQtr"
+      "matrixQtr filterProp"
+      "matrixQtr filterProp"
+      "matrixMonth matrixMonth"
+      "matrixMonth matrixMonth"
+      "matrixMonth matrixMonth"
+      "matrixMonth matrixMonth";
+
+    grid-template-columns: 8fr 2fr;
+    grid-template-rows: auto;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 1fr 2fr; */
+  }
 }
 
-@media screen and (max-width: 440px){
-    #body {
-        min-height: 95vh;
-        display: grid;
-        grid-template-areas: 
-        'filterYear'
-        'filterMonth'
-        'filterQtr'
-        'filterProp'
-        'total'
-        'stats'
-        'chartYear'
-        'chartCategory'
-        'chartSubcategory'
-        'chartMonth'
-        'matrixQtr'
-        'matrixMonth'
-        ;
-    
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 1fr 2fr; */
-    }
+@media screen and (max-width: 440px) {
+  #body {
+    min-height: 95vh;
+    display: grid;
+    grid-template-areas:
+      "filterYear"
+      "filterMonth"
+      "filterQtr"
+      "filterProp"
+      "total"
+      "stats"
+      "chartYear"
+      "chartCategory"
+      "chartSubcategory"
+      "chartMonth"
+      "matrixQtr"
+      "matrixMonth";
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr 1fr 2fr; */
+  }
 }

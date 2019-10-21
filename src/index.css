@@ -20,6 +20,7 @@ div.dc-data-count {
 
 #transactions {
   display: grid;
+  width:100vw;
   grid-template-areas:
     "datacount"
     "table";
@@ -71,7 +72,7 @@ div.dc-data-count {
 /* <div id="stats"></div> */
 #stats {
   grid-area: stats;
-  background-color: gray;
+  /* background-color: gray; */
 }
 
 .dc-select-menu {

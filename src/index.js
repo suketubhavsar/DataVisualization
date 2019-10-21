@@ -268,7 +268,7 @@ window.onload = () => {
 
     matrixQtr = dc.heatMap("#matrixQtr");
     matrixQtr
-      .margins({ top: 10, right: 10, bottom: 30, left: 30 })
+      //.margins({ top: 10, right: 10, bottom: 30, left: 30 })
       .dimension(yearQtrDim)
       .group(yearQtrAmountGroup)
       .rowsLabel(d => "Qtr-" + d)

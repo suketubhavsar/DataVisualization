@@ -136,7 +136,9 @@ div.dc-data-count {
 /* <div id="table"></div> */
 #table{
     grid-area: table;
-    /* background-color: powderblue; */
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
 }
 
 @media screen and (max-width: 780px){

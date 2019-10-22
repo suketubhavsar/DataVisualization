@@ -269,7 +269,10 @@ window.onload = () => {
         .domain(yearAmountGroup.all().map(d => d.key))
         .range([0,cw]);
         const xbw=xScale.bandwidth();
-
+        
+        chart.selectAll('g.box-group text')
+          .remove();
+          
         chart.selectAll('g.box-group')
         .attr("fill-opacity","0.75")
         .append("text")
@@ -340,6 +343,9 @@ window.onload = () => {
         .domain(yearAmountGroup.all().map(d => d.key))
         .range([0,cw]);
         const xbw=xScale.bandwidth();
+
+        chart.selectAll('g.box-group text')
+          .remove();
 
         chart.selectAll('g.box-group')
         .attr("fill-opacity","0.75")

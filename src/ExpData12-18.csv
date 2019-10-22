@@ -506,7 +506,6 @@ Healthcare,Physician,Primary,-250,2013,October
 Household,Household - Unassigned,Primary,28.24,2013,October
 Insurance,Automobile,Primary,328.33,2013,October
 Insurance,Homeowner's/Renter's,Primary,51.47,2013,October
-Investment,Investment,Primary,1399,2013,October
 Job Expense,Non-Reimbursed,Primary,300,2013,October
 Pet Care,Food,Primary,46.27,2013,October
 Travel/Vacation,Miscellaneous,Primary,98.54,2013,October
@@ -626,7 +625,6 @@ Hobbies/Leisure,Movies & Video Rentals,Primary,15.98,2014,March
 Home Improvement,Home Improvement,Primary,5.64,2014,March
 Insurance,Automobile,Primary,306.25,2014,March
 Insurance,Homeowner's/Renter's,Primary,102.94,2014,March
-Investment,Investment,Primary,860,2014,March
 Job Expense,Non-Reimbursed,Primary,300,2014,March
 Payment,Payment,Primary,1500,2014,March
 Pet Care,Food,Primary,10.87,2014,March
@@ -653,7 +651,6 @@ Home Improvement,Home Improvement,Primary,0,2014,April
 Household,Yard Service,Primary,58.46,2014,April
 Insurance,Automobile,Primary,306.25,2014,April
 Insurance,Homeowner's/Renter's,Primary,51.47,2014,April
-Investment,Investment,Primary,1400,2014,April
 Job Expense,Non-Reimbursed,Primary,300,2014,April
 Pet Care,Food,Primary,37.64,2014,April
 Taxes,Real Estate Taxes,Primary,623,2014,April
@@ -935,7 +932,6 @@ Household,Furnishings,Primary,15.75,2015,April
 Household,Household - Unassigned,Primary,107.32,2015,April
 Insurance,Automobile,Primary,292.91,2015,April
 Insurance,Homeowner's/Renter's,Primary,59.03,2015,April
-Investment,Investment,Primary,-763.09,2015,April
 Job Expense,Non-Reimbursed,Primary,19.4,2015,April
 Pet Care,Food,Primary,2.4,2015,April
 Taxes,Real Estate Taxes,Primary,631,2015,April
@@ -1191,7 +1187,6 @@ Insurance,Automobile,Primary,292.91,2016,January
 Insurance,Homeowner's/Renter's,Investment,36.99,2016,January
 Insurance,Insurance - Unassigned,Primary,-3.54,2016,January
 Insurance,Life,Primary,132.78,2016,January
-Investment,Investment,Primary,2254,2016,January
 Job Expense,Non-Reimbursed,Primary,400,2016,January
 Pet Care,Food,Primary,144.71,2016,January
 Taxes,Taxes - Unassigned,Primary,0.52,2016,January
@@ -1253,7 +1248,6 @@ Insurance,Automobile,Primary,305.37,2016,March
 Insurance,Homeowner's/Renter's,Primary,156.22,2016,March
 Insurance,Homeowner's/Renter's,Investment,36.99,2016,March
 Insurance,Life,Primary,132.78,2016,March
-Investment,Investment,Primary,160,2016,March
 Job Expense,Non-Reimbursed,Primary,400,2016,March
 Pet Care,Food,Primary,41.85,2016,March
 Taxes,Real Estate Taxes,Primary,649,2016,March
@@ -1286,7 +1280,6 @@ Household,Household - Unassigned,Primary,31.31,2016,April
 Insurance,Automobile,Primary,305.33,2016,April
 Insurance,Homeowner's/Renter's,Investment,36.99,2016,April
 Insurance,Life,Primary,132.78,2016,April
-Investment,Investment,Primary,160,2016,April
 Job Expense,Non-Reimbursed,Primary,458,2016,April
 Pet Care,Food,Primary,27.9,2016,April
 Taxes,Real Estate Taxes,Primary,649,2016,April
@@ -1323,7 +1316,6 @@ Insurance,Automobile,Primary,305.33,2016,May
 Insurance,Homeowner's/Renter's,Primary,156.22,2016,May
 Insurance,Homeowner's/Renter's,Investment,36.99,2016,May
 Insurance,Life,Primary,132.78,2016,May
-Investment,Investment,Primary,160,2016,May
 Job Expense,Non-Reimbursed,Primary,329,2016,May
 Pet Care,Food,Primary,11.5,2016,May
 Taxes,Taxes - Unassigned,Primary,0.52,2016,May
@@ -1356,7 +1348,6 @@ Insurance,Homeowner's/Renter's,Primary,78.11,2016,June
 Insurance,Homeowner's/Renter's,Investment,36.99,2016,June
 Insurance,Insurance - Unassigned,Primary,-3.63,2016,June
 Insurance,Life,Primary,132.78,2016,June
-Investment,Investment,Primary,240,2016,June
 Job Expense,Non-Reimbursed,Primary,400,2016,June
 Pet Care,Food,Primary,34.65,2016,June
 Taxes,Taxes - Unassigned,Primary,0.52,2016,June
@@ -1389,7 +1380,6 @@ Home Improvement,Home Improvement,Investment,229.3,2016,July
 Insurance,Automobile,Primary,305.33,2016,July
 Insurance,Homeowner's/Renter's,Investment,41.51,2016,July
 Insurance,Life,Primary,132.78,2016,July
-Investment,Investment,Primary,160,2016,July
 Job Expense,Non-Reimbursed,Primary,418.43,2016,July
 Pet Care,Food,Primary,9.9,2016,July
 Taxes,Taxes - Unassigned,Primary,0.52,2016,July
@@ -1423,7 +1413,6 @@ Insurance,Automobile,Primary,305.33,2016,August
 Insurance,Homeowner's/Renter's,Primary,156.22,2016,August
 Insurance,Homeowner's/Renter's,Investment,41.39,2016,August
 Insurance,Life,Primary,132.78,2016,August
-Investment,Investment,Primary,160,2016,August
 Job Expense,Non-Reimbursed,Primary,400,2016,August
 Pet Care,Food,Primary,111.61,2016,August
 Taxes,Real Estate Taxes,Primary,1364.95,2016,August
@@ -1456,7 +1445,6 @@ Insurance,Automobile,Primary,275.83,2016,September
 Insurance,Homeowner's/Renter's,Primary,83.16,2016,September
 Insurance,Homeowner's/Renter's,Investment,41.39,2016,September
 Insurance,Life,Primary,132.78,2016,September
-Investment,Investment,Primary,160,2016,September
 Job Expense,Non-Reimbursed,Primary,400,2016,September
 Personal Care,Personal Care,Primary,26.73,2016,September
 Pet Care,Food,Primary,67.97,2016,September
@@ -1491,7 +1479,6 @@ Insurance,Automobile,Primary,275.83,2016,October
 Insurance,Homeowner's/Renter's,Primary,83.16,2016,October
 Insurance,Homeowner's/Renter's,Investment,41.39,2016,October
 Insurance,Life,Primary,132.78,2016,October
-Investment,Investment,Primary,160,2016,October
 Job Expense,Non-Reimbursed,Primary,500,2016,October
 Personal Care,Personal Care,Primary,19.95,2016,October
 Pet Care,Food,Primary,61.87,2016,October
@@ -1523,7 +1510,6 @@ Insurance,Automobile,Primary,275.83,2016,November
 Insurance,Homeowner's/Renter's,Primary,83.16,2016,November
 Insurance,Homeowner's/Renter's,Investment,41.39,2016,November
 Insurance,Life,Primary,132.78,2016,November
-Investment,Investment,Primary,160,2016,November
 Job Expense,Non-Reimbursed,Primary,400,2016,November
 Personal Care,Personal Care,Primary,70.8,2016,November
 Pet Care,Food,Primary,10.65,2016,November
@@ -1552,7 +1538,6 @@ Insurance,Automobile,Primary,275.83,2016,December
 Insurance,Homeowner's/Renter's,Primary,83.16,2016,December
 Insurance,Homeowner's/Renter's,Investment,41.39,2016,December
 Insurance,Life,Primary,132.78,2016,December
-Investment,Investment,Primary,240,2016,December
 Job Expense,Non-Reimbursed,Primary,400,2016,December
 Personal Care,Personal Care,Primary,2544.95,2016,December
 Pet Care,Food,Primary,51.38,2016,December
@@ -1584,7 +1569,6 @@ Insurance,Automobile,Primary,275.83,2017,January
 Insurance,Homeowner's/Renter's,Primary,83.16,2017,January
 Insurance,Homeowner's/Renter's,Investment,41.39,2017,January
 Insurance,Life,Primary,132.78,2017,January
-Investment,Investment,Primary,160,2017,January
 Job Expense,Non-Reimbursed,Primary,400,2017,January
 Personal Care,Personal Care,Primary,19.95,2017,January
 Pet Care,Food,Primary,36.24,2017,January
@@ -1612,7 +1596,6 @@ Household,Household - Unassigned,Primary,39.47,2017,February
 Insurance,Automobile,Primary,275.83,2017,February
 Insurance,Homeowner's/Renter's,Investment,41.39,2017,February
 Insurance,Life,Primary,132.78,2017,February
-Investment,Investment,Primary,160,2017,February
 Job Expense,Non-Reimbursed,Primary,400,2017,February
 Personal Care,Personal Care,Primary,19.95,2017,February
 Pet Care,Food,Primary,57.66,2017,February
@@ -1644,7 +1627,6 @@ Insurance,Homeowner's/Renter's,Primary,166.32,2017,March
 Insurance,Homeowner's/Renter's,Investment,41.39,2017,March
 Insurance,Insurance - Unassigned,Primary,-3.45,2017,March
 Insurance,Life,Primary,132.78,2017,March
-Investment,Investment,Primary,374,2017,March
 Job Expense,Non-Reimbursed,Primary,300,2017,March
 Personal Care,Personal Care,Primary,19.95,2017,March
 Pet Care,Food,Primary,53.73,2017,March
@@ -1679,7 +1661,6 @@ Home Improvement,Home Improvement,Investment,1063.13,2017,April
 Insurance,Automobile,Primary,279.16,2017,April
 Insurance,Homeowner's/Renter's,Investment,41.39,2017,April
 Insurance,Life,Primary,132.78,2017,April
-Investment,Investment,Primary,160,2017,April
 Job Expense,Non-Reimbursed,Primary,400,2017,April
 Personal Care,Personal Care,Primary,19.95,2017,April
 Pet Care,Food,Primary,17.74,2017,April
@@ -1719,7 +1700,6 @@ Insurance,Automobile,Primary,279.16,2017,May
 Insurance,Homeowner's/Renter's,Primary,166.32,2017,May
 Insurance,Homeowner's/Renter's,Investment,41.39,2017,May
 Insurance,Life,Primary,132.78,2017,May
-Investment,Investment,Primary,160,2017,May
 Job Expense,Non-Reimbursed,Primary,300,2017,May
 Personal Care,Personal Care,Primary,19.95,2017,May
 Pet Care,Food,Primary,73.64,2017,May
@@ -1748,7 +1728,6 @@ Insurance,Automobile,Primary,279.16,2017,June
 Insurance,Homeowner's/Renter's,Primary,83.16,2017,June
 Insurance,Homeowner's/Renter's,Investment,41.39,2017,June
 Insurance,Life,Primary,132.78,2017,June
-Investment,Investment,Primary,240,2017,June
 Job Expense,Non-Reimbursed,Primary,400,2017,June
 Personal Care,Personal Care,Primary,19.95,2017,June
 Pet Care,Food,Primary,121.58,2017,June
@@ -1779,7 +1758,6 @@ Insurance,Homeowner's/Renter's,Primary,83.16,2017,July
 Insurance,Homeowner's/Renter's,Investment,42.68,2017,July
 Insurance,Insurance - Unassigned,Primary,16.43,2017,July
 Insurance,Life,Primary,132.78,2017,July
-Investment,Investment,Primary,160,2017,July
 Job Expense,Non-Reimbursed,Primary,300,2017,July
 Personal Care,Personal Care,Primary,19.95,2017,July
 Pet Care,Food,Primary,98.9,2017,July
@@ -1818,7 +1796,6 @@ Insurance,Homeowner's/Renter's,Primary,83.16,2017,August
 Insurance,Homeowner's/Renter's,Investment,42.56,2017,August
 Insurance,Insurance - Unassigned,Primary,14.76,2017,August
 Insurance,Life,Primary,132.78,2017,August
-Investment,Investment,Primary,160,2017,August
 Job Expense,Non-Reimbursed,Primary,300,2017,August
 Personal Care,Personal Care,Primary,19.95,2017,August
 Pet Care,Food,Primary,8.3,2017,August
@@ -1851,7 +1828,6 @@ Insurance,Automobile,Primary,279.16,2017,September
 Insurance,Homeowner's/Renter's,Investment,42.56,2017,September
 Insurance,Insurance - Unassigned,Primary,20.26,2017,September
 Insurance,Life,Primary,132.78,2017,September
-Investment,Investment,Primary,160,2017,September
 Job Expense,Non-Reimbursed,Primary,396.05,2017,September
 Personal Care,Personal Care,Primary,19.95,2017,September
 Pet Care,Food,Primary,7.91,2017,September
@@ -1886,7 +1862,6 @@ Insurance,Homeowner's/Renter's,Primary,171.46,2017,October
 Insurance,Homeowner's/Renter's,Investment,42.56,2017,October
 Insurance,Insurance - Unassigned,Primary,1.56,2017,October
 Insurance,Life,Primary,132.78,2017,October
-Investment,Investment,Primary,10160,2017,October
 Job Expense,Non-Reimbursed,Primary,300,2017,October
 Personal Care,Personal Care,Primary,19.95,2017,October
 Pet Care,Food,Primary,3.55,2017,October
@@ -1919,7 +1894,6 @@ Insurance,Homeowner's/Renter's,Primary,85.67,2017,November
 Insurance,Homeowner's/Renter's,Investment,42.56,2017,November
 Insurance,Insurance - Unassigned,Primary,2.26,2017,November
 Insurance,Life,Primary,132.78,2017,November
-Investment,Investment,Primary,240,2017,November
 Job Expense,Non-Reimbursed,Primary,501.7,2017,November
 Personal Care,Personal Care,Primary,19.95,2017,November
 Pet Care,Food,Primary,51.08,2017,November
@@ -1952,7 +1926,6 @@ Insurance,Automobile,Primary,279.16,2017,December
 Insurance,Homeowner's/Renter's,Investment,42.56,2017,December
 Insurance,Insurance - Unassigned,Primary,12.02,2017,December
 Insurance,Life,Primary,132.78,2017,December
-Investment,Investment,Primary,160,2017,December
 Job Expense,Non-Reimbursed,Primary,500,2017,December
 Personal Care,Personal Care,Primary,19.95,2017,December
 Pet Care,Food,Primary,94.72,2017,December
@@ -1980,7 +1953,6 @@ Insurance,Automobile,Primary,279.16,2018,January
 Insurance,Homeowner's/Renter's,Primary,171.34,2018,January
 Insurance,Homeowner's/Renter's,Investment,42.56,2018,January
 Insurance,Life,Primary,132.78,2018,January
-Investment,Investment,Primary,560,2018,January
 Pet Care,Food,Primary,14.17,2018,January
 Safety Deposit Box,Safety Deposit Box,Primary,90.4,2018,January
 Travel/Vacation,Miscellaneous,Primary,600,2018,January
@@ -2008,7 +1980,6 @@ Home Improvement,Home Improvement,Investment,135.7,2018,February
 Insurance,Automobile,Primary,279.16,2018,February
 Insurance,Homeowner's/Renter's,Investment,42.56,2018,February
 Insurance,Life,Primary,132.78,2018,February
-Investment,Investment,Primary,560,2018,February
 Job Expense,Non-Reimbursed,Primary,100,2018,February
 Pet Care,Food,Primary,11.81,2018,February
 Taxes,Real Estate Taxes,Primary,697,2018,February
@@ -2047,7 +2018,6 @@ Insurance,Homeowner's/Renter's,Primary,85.67,2018,March
 Insurance,Homeowner's/Renter's,Investment,42.56,2018,March
 Insurance,Insurance - Unassigned,Primary,2.81,2018,March
 Insurance,Life,Primary,132.78,2018,March
-Investment,Investment,Primary,560,2018,March
 Job Expense,Non-Reimbursed,Primary,400,2018,March
 Personal Care,Personal Care,Primary,19.95,2018,March
 Pet Care,Food,Primary,14.49,2018,March
@@ -2083,7 +2053,6 @@ Insurance,Homeowner's/Renter's,Primary,171.34,2018,April
 Insurance,Homeowner's/Renter's,Investment,42.56,2018,April
 Insurance,Insurance - Unassigned,Primary,2.83,2018,April
 Insurance,Life,Primary,132.78,2018,April
-Investment,Investment,Primary,560,2018,April
 Job Expense,Non-Reimbursed,Primary,300,2018,April
 Personal Care,Personal Care,Primary,19.95,2018,April
 Pet Care,Food,Primary,12.1,2018,April
@@ -2122,7 +2091,6 @@ Insurance,Homeowner's/Renter's,Primary,85.67,2018,May
 Insurance,Homeowner's/Renter's,Investment,42.56,2018,May
 Insurance,Insurance - Unassigned,Primary,12.41,2018,May
 Insurance,Life,Primary,132.78,2018,May
-Investment,Investment,Primary,640,2018,May
 Job Expense,Non-Reimbursed,Primary,396.05,2018,May
 Personal Care,Personal Care,Primary,19.95,2018,May
 Pet Care,Food,Primary,29.8,2018,May
@@ -2155,7 +2123,6 @@ Insurance,Automobile,Primary,279.66,2018,June
 Insurance,Homeowner's/Renter's,Investment,42.56,2018,June
 Insurance,Insurance - Unassigned,Primary,2.86,2018,June
 Insurance,Life,Primary,132.78,2018,June
-Investment,Investment,Primary,560,2018,June
 Job Expense,Non-Reimbursed,Primary,300,2018,June
 Personal Care,Personal Care,Primary,19.95,2018,June
 Pet Care,Food,Primary,43.29,2018,June
@@ -2189,7 +2156,6 @@ Insurance,Homeowner's/Renter's,Primary,171.34,2018,July
 Insurance,Homeowner's/Renter's,Investment,44.21,2018,July
 Insurance,Insurance - Unassigned,Primary,3.13,2018,July
 Insurance,Life,Primary,132.78,2018,July
-Investment,Investment,Primary,560,2018,July
 Job Expense,Non-Reimbursed,Primary,300,2018,July
 Personal Care,Personal Care,Primary,19.95,2018,July
 Pet Care,Food,Primary,62.99,2018,July
@@ -2224,7 +2190,6 @@ Insurance,Homeowner's/Renter's,Primary,85.67,2018,August
 Insurance,Homeowner's/Renter's,Investment,44.09,2018,August
 Insurance,Insurance - Unassigned,Primary,-0.67,2018,August
 Insurance,Life,Primary,132.78,2018,August
-Investment,Investment,Primary,560,2018,August
 Job Expense,Non-Reimbursed,Primary,212.45,2018,August
 Personal Care,Personal Care,Primary,19.95,2018,August
 Pet Care,Food,Primary,38.12,2018,August
@@ -2260,7 +2225,6 @@ Insurance,Automobile,Primary,279.66,2018,September
 Insurance,Homeowner's/Renter's,Investment,44.09,2018,September
 Insurance,Insurance - Unassigned,Primary,2.97,2018,September
 Insurance,Life,Primary,132.78,2018,September
-Investment,Investment,Primary,560,2018,September
 Personal Care,Personal Care,Primary,19.95,2018,September
 Taxes,Real Estate Taxes,Primary,750,2018,September
 Taxes,Real Estate Taxes,Investment,672,2018,September
@@ -2298,7 +2262,6 @@ Insurance,Homeowner's/Renter's,Primary,177.66,2018,October
 Insurance,Homeowner's/Renter's,Investment,44.09,2018,October
 Insurance,Insurance - Unassigned,Primary,11.78,2018,October
 Insurance,Life,Primary,132.78,2018,October
-Investment,Investment,Primary,560,2018,October
 Personal Care,Personal Care,Primary,19.95,2018,October
 Pet Care,Food,Primary,16.71,2018,October
 Taxes,Taxes - Unassigned,Primary,1.46,2018,October
@@ -2330,7 +2293,6 @@ Insurance,Homeowner's/Renter's,Primary,88.83,2018,November
 Insurance,Homeowner's/Renter's,Investment,44.09,2018,November
 Insurance,Insurance - Unassigned,Primary,2.91,2018,November
 Insurance,Life,Primary,132.78,2018,November
-Investment,Investment,Primary,640,2018,November
 Personal Care,Personal Care,Primary,19.95,2018,November
 Pet Care,Food,Primary,7.76,2018,November
 Taxes,Taxes - Unassigned,Primary,0.75,2018,November
@@ -2368,7 +2330,6 @@ Insurance,Credit Card,Primary,0.63,2018,December
 Insurance,Homeowner's/Renter's,Primary,88.83,2018,December
 Insurance,Homeowner's/Renter's,Investment,44.09,2018,December
 Insurance,Life,Primary,132.78,2018,December
-Investment,Investment,Primary,5560,2018,December
 Personal Care,Personal Care,Primary,19.95,2018,December
 Pet Care,Food,Primary,102.26,2018,December
 Taxes,Taxes - Unassigned,Primary,0.57,2018,December

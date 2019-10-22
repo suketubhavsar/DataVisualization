@@ -98,18 +98,26 @@ window.onload = () => {
       .numberVisible(8)
       .group(yearDim.group());
 
-    monthDim = ndx.dimension(d => d.Month);
+    // monthDim = ndx.dimension(d => d.Month);
+    // let filterMonth = dc.selectMenu("#filterMonth");
+    // filterMonth
+    //   .dimension(monthDim)
+    //   .multiple(true)
+    //   .numberVisible(13)
+    //   .group(monthDim.group())
+    //   .order((a, b) => {
+    //     let akey = months.indexOf(a.key);
+    //     let bkey = months.indexOf(b.key);
+    //     return akey > bkey ? 1 : bkey > akey ? -1 : 0;
+    //   });
+    monthDim = ndx.dimension(d => d.MonthNumber);
     let filterMonth = dc.selectMenu("#filterMonth");
     filterMonth
       .dimension(monthDim)
       .multiple(true)
       .numberVisible(13)
-      .group(monthDim.group())
-      .order((a, b) => {
-        let akey = months.indexOf(a.key);
-        let bkey = months.indexOf(b.key);
-        return akey > bkey ? 1 : bkey > akey ? -1 : 0;
-      });
+      .group(monthDim.group());
+      filterMonth.title(d => months[Number(d.key)]+": " + d.value);      
 
     qtrDim = ndx.dimension(d => d.Qtr);
     let filterQtr = dc.selectMenu("#filterQtr");
@@ -168,7 +176,7 @@ window.onload = () => {
       .dimension(yearDim)
       .group(yearAmountGroup)
       .elasticY(true)
-      .yAxisLabel("Total Amount")
+      .yAxisLabel("Amount")
       .xAxisLabel("Year")
       .title(function(d) {
         return d.key + ": $" + d.value.toFixed(2);
@@ -193,7 +201,7 @@ window.onload = () => {
       .dimension(monthDim)
       .group(monthAmountGroup)
       .elasticY(true)
-      .yAxisLabel("Total Amount")
+      .yAxisLabel("Amount")
       .xAxisLabel("Month")
       .title(function(d) {
         return d.key + ": $" + d.value.toFixed(2);
@@ -203,6 +211,7 @@ window.onload = () => {
       .xUnits(dc.units.ordinal)
       .renderHorizontalGridLines(true);
     chartMonth.yAxis().tickFormat(d => d / 1000 + "K");
+    chartMonth.xAxis().tickFormat(d => months[Number(d)].substr(0,3));
 
     //matrixMonth
     yearMonthDim = ndx.dimension(function(d) {
@@ -212,10 +221,10 @@ window.onload = () => {
 
     matrixMonth = dc.heatMap("#matrixMonth");
     matrixMonth
-      .margins({ top: 10, right: 10, bottom: 30, left: 50 })
+      // .margins({ top: 10, right: 10, bottom: 30, left: 50 })
       .dimension(yearMonthDim)
       .group(yearMonthAmountGroup)
-      .rowsLabel(d => months[d])
+      .rowsLabel(d => months[d].substr(0,3))
       .keyAccessor(function(d) {
         return +d.key[0];
       })

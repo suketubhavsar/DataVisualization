@@ -172,7 +172,6 @@ window.onload = () => {
 
     chartYear = dc.barChart("#chartYear");
     chartYear
-      // .margins({top: 10, right: 50, bottom: 30, left: 40})
       .dimension(yearDim)
       .group(yearAmountGroup)
       .elasticY(true)
@@ -197,7 +196,6 @@ window.onload = () => {
 
     chartMonth = dc.barChart("#chartMonth");
     chartMonth
-      // .margins({top: 10, right: 50, bottom: 30, left: 40})
       .dimension(monthDim)
       .group(monthAmountGroup)
       .elasticY(true)
@@ -221,9 +219,10 @@ window.onload = () => {
 
     matrixMonth = dc.heatMap("#matrixMonth");
     matrixMonth
-      // .margins({ top: 10, right: 10, bottom: 30, left: 50 })
       .dimension(yearMonthDim)
       .group(yearMonthAmountGroup)
+      //.xBorderRadius(4)
+      //.yBorderRadius(4)
       .rowsLabel(d => months[d].substr(0,3))
       .keyAccessor(function(d) {
         return +d.key[0];
@@ -240,7 +239,7 @@ window.onload = () => {
           d.key[0] +
           "\n" +
           "Month:  " +
-          months[d.key[1]] +
+          months[Number(d.key[1])] +
           "\n" +
           "Amount: $" +
           d.value.toFixed(2)
@@ -251,24 +250,40 @@ window.onload = () => {
         d3
           .scaleLinear()
           .domain(d3.extent(yearMonthAmountGroup.all().map(d => d.value)))
-          .range(["white", "red"])
+          .range(["lightgray", "red"])
       )
-      .calculateColorDomain();
-    // .on('pretransition', function(chart) {
-    //     // chart.selectAll('rect.heat-box')
-    //     chart.selectAll('g.box-group')
-    //     .attr("fill-opacity","0.25")
-    //     .append("text")
-    //     // .attr("x", d => x(d.value))
-    //     // .attr("width","100%")
-    //     // .attr("height","100%")
-    //     .attr("fill","black")
-    //     .attr("dy",".35em")
-    //     .text(d => {return "$"+d.value.toFixed(2);});
-    //     console.log(chart);
-    // });
+      .calculateColorDomain()
+    .on('pretransition', function(chart) {
+        // chart.selectAll('rect.heat-box')
+        const m = chart.margins();
+        const ch=chart.height()-m.top-m.bottom;
+        const cw= chart.width()-m.left-m.right;
 
-    //console.log(d3.extent(yearMonthAmountGroup.all().map(d=>d.value)));
+        let yScale = d3.scaleBand()
+                      .domain(months)
+                      .range([ch,0]);
+
+        const ybw=yScale.bandwidth();
+
+        let xScale = d3.scaleBand()
+        .domain(yearAmountGroup.all().map(d => d.key))
+        .range([0,cw]);
+        const xbw=xScale.bandwidth();
+
+        chart.selectAll('g.box-group')
+        .attr("fill-opacity","0.75")
+        .append("text")
+        .attr("x", d => xScale(d.key[0])+(xbw/2))
+        .attr("width",xbw)
+        .attr("y",d => m.top+yScale(months[Number(d.key[1])]))
+        .attr("height",ybw)
+        .attr("fill","black")
+        .attr("font-size","60%")
+        .attr("text-anchor","middle")
+        //.attr("dy",".35em")
+        .text(d => {return "$"+d.value.toFixed(2);});
+    });
+
     //matrixQtr
     yearQtrDim = ndx.dimension(function(d) {
       return [d.Year, d.Qtr];
@@ -295,7 +310,7 @@ window.onload = () => {
           "Year:   " +
           d.key[0] +
           "\n" +
-          "Qtr:  " +
+          "Qtr:  Qtr-" +
           d.key[1] +
           "\n" +
           "Amount: $" +
@@ -308,8 +323,37 @@ window.onload = () => {
           .domain(d3.extent(yearQtrAmountGroup.all().map(d => d.value)))
           .range(["white", "red"])
       )
-      .calculateColorDomain();
+      .calculateColorDomain()
+      .on('pretransition', function(chart) {
+        // chart.selectAll('rect.heat-box')
+        const m = chart.margins();
+        const ch=chart.height()-m.top-m.bottom;
+        const cw= chart.width()-m.left-m.right;
 
+        let yScale = d3.scaleBand()
+                      .domain(qtrDim.group().all().map(d => d.key))
+                      .range([ch,0]);
+
+        const ybw=yScale.bandwidth();
+
+        let xScale = d3.scaleBand()
+        .domain(yearAmountGroup.all().map(d => d.key))
+        .range([0,cw]);
+        const xbw=xScale.bandwidth();
+
+        chart.selectAll('g.box-group')
+        .attr("fill-opacity","0.75")
+        .append("text")
+        .attr("x", d => xScale(d.key[0])+(xbw/2))
+        .attr("width",xbw)
+        .attr("y",d => {console.log(d); return m.top+yScale(d.key[1]);})
+        .attr("height",ybw)
+        .attr("fill","black")
+        .attr("font-size","60%")
+        .attr("text-anchor","middle")
+        //.attr("dy",".35em")
+        .text(d => {return "$"+d.value.toFixed(2);});
+    });
     //setting table
 
     let dataTable = dc.dataTable("#tableData");

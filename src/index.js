@@ -278,7 +278,7 @@ window.onload = () => {
         .append("text")
         .attr("x", d => xScale(d.key[0])+(xbw/2))
         .attr("width",xbw)
-        .attr("y",d => m.top+yScale(months[Number(d.key[1])]))
+        .attr("y",d => m.top+yScale(months[Number(d.key[1])])+(ybw/4))
         .attr("height",ybw)
         .attr("fill","black")
         .attr("font-size","60%")
@@ -336,28 +336,28 @@ window.onload = () => {
         let yScale = d3.scaleBand()
                       .domain(qtrDim.group().all().map(d => d.key))
                       .range([ch,0]);
-
+        //console.log(qtrDim.group().all().map(d => d.key));
         const ybw=yScale.bandwidth();
 
         let xScale = d3.scaleBand()
         .domain(yearAmountGroup.all().map(d => d.key))
         .range([0,cw]);
+        //console.log(yearAmountGroup.all().map(d => d.key));
         const xbw=xScale.bandwidth();
 
         chart.selectAll('g.box-group text')
           .remove();
-
+        //console.log(xbw,ybw);
         chart.selectAll('g.box-group')
         .attr("fill-opacity","0.75")
         .append("text")
         .attr("x", d => xScale(d.key[0])+(xbw/2))
         .attr("width",xbw)
-        .attr("y",d => {console.log(d); return m.top+yScale(d.key[1]);})
+        .attr("y",d => m.top+yScale(d.key[1])+(ybw/4))
         .attr("height",ybw)
         .attr("fill","black")
-        .attr("font-size","60%")
+        .attr("font-size","55%")
         .attr("text-anchor","middle")
-        //.attr("dy",".35em")
         .text(d => {return "$"+d.value.toFixed(2);});
     });
     //setting table

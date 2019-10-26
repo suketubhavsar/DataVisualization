@@ -56,14 +56,16 @@
   
       </div>
     </div>
+    <button id="btnUserData">Data</button>
     <div id="transactions">
       
     <div class='dc-data-count' >
         <strong>Transactions:</strong><br />
         <span class='filter-count'></span> selected out of <span class='total-count'></span> records.
         <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
-      </div>
-      <div id="table" style="height:30vh; overflow-y: scroll;">
+    </div>
+    
+    <div id="table" style="height:30vh; overflow-y: scroll;">
           <table id="tableData" ></table>
     </div>
   </div>
@@ -71,6 +73,20 @@
             <p>Expense Dashboard is to visualize expense transcations and compare changes yearly, qtrly and monthly.</p>
             <p>This dashboard is developed using HTML5, CSS, JavaScript and JS libraries such as Crossfilter, D3 and DC.</p>
             </div>
+  <div id="userData" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <!-- <span class="modal-close">&times;</span> -->
+
+      <label>Input data in csv format and first row must be Category,SubCategory,Property,Amount,Year,Month.</label>
+      <textarea id="taUserData" placeholder="Category,SubCategory,Property,Amount,Year,Month
+Automobile,Car Payment,Primary,249.96,2012,January
+Bank Charges,Service Charge,Primary,9,2012,January
+Bills,Cell Phone,Primary,39.55,2012,January"></textarea>
+      <button id="btnSave">Load</button>
+      <button id="btnCancel">Cancel</button>
+    </div>    
+  </div>
           <script type="text/javascript" src="js/d3.js"></script>
           <script type="text/javascript" src="js/crossfilter.js"></script>
           <script type="text/javascript" src="js/dc.js"></script>
